@@ -8,11 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d0a5a3d631.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h2 class="text-4xl text-center pt-8">Money Master</h2>
+        <h2 class="text-4xl text-center pt-8 font-bold text-blue-400">Money Master</h2>
     </header>
 
     <main class="container mt-5 text-center">
@@ -25,9 +29,9 @@
             <div class="calculation-bg ml-52">
                 <!-- Income Starts-->
                 <div>
-                    <p class="mt-20 text-2xl">Income</p>
+                    <p class="mt-20 text-2xl font-semibold">Income</p>
                     <div class="flex ml-36 mt-4">
-                        <p>Income</p>
+                        <p class="mt-2">Income</p>
                         <input type="number" class="input-field ml-2">
                     </div>
                 </div>
@@ -35,17 +39,17 @@
 
                 <!-- Expenses Starts -->
                 <div class="mt-8">
-                    <p class="text-2xl">Expenses</p>
+                    <p class="text-2xl font-semibold">Expenses</p>
                     <div class="flex ml-36 mt-4">
-                        <p>Food</p>
+                        <p class="mt-2">Food</p>
                         <input type="number" class="input-field ml-5">
                     </div>
                     <div class="flex ml-36 mt-4">
-                        <p>Rent</p>
+                        <p class="mt-2">Rent</p>
                         <input type="number" class="input-field ml-6">
                     </div>
                     <div class="flex ml-36 mt-4">
-                        <p>Clothes</p>
+                        <p class="mt-2">Clothes</p>
                         <input type="number" class="input-field ml-1">
                     </div>
                 </div>
@@ -54,14 +58,14 @@
 
                 <!-- Primary Output Starts -->
                 <div class="mt-8">
-                    <p class="text-2xl">Total Expenses: <span>0</span></p>
-                    <p class="text-2xl mt-2">Balance: <span>0</span></p>
+                    <p class="text-2xl font-semibold">Total Expenses: <span>0</span></p>
+                    <p class="text-2xl mt-2 font-semibold">Balance: <span>0</span></p>
                 </div>
                 <!-- Primary Output Ends -->
 
                 <!-- Saving Starts -->
                 <div class="flex ml-36 mt-8">
-                    <p>Save</p>
+                    <p class="mt-2">Save</p>
                     <input type="number" class="input-field ml-5">
                     <p class="ml-2 mt-2">%</p>
                     <button class="bg-sky-400 p-2 rounded-lg ml-3">Save</button>
@@ -70,8 +74,8 @@
 
                 <!-- Saving Calculation Starts -->
                 <div class="mt-8">
-                    <p class="text-2xl">Saving Amount: <span>0</span></p>
-                    <p class="text-2xl">Remaining Balance: <span>0</span></p>
+                    <p class="text-2xl font-semibold">Saving Amount: <span>0</span></p>
+                    <p class="text-2xl font-semibold">Remaining Balance: <span>0</span></p>
                 </div>
                 <!-- Saving Calculation Ends -->
             </div>
