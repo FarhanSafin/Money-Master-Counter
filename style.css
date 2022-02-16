@@ -1,13 +1,16 @@
+/* Font for the body */
 body{
     font-family: 'Roboto', sans-serif;
 }
 
+/* Styling the input fields */
 .input-field{
     height: 44px;
     width: 229px;
     background-color: #DCDCDC;
 }
 
+/* Background color for the calculation/right side */
 .calculation-bg{
     background-color: #F8F8F8;
 }

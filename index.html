@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expense and Saving Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,21 +15,21 @@
 
 <body>
     <header>
-        <h2 class="text-4xl text-center pt-8 font-bold text-lime-700 underline underline-offset-8">Calculator for Living </h2>
+        <h2 class="text-4xl text-center pt-8 font-bold text-lime-700 underline underline-offset-8 sm:text-center">Calculator for Living </h2>
     </header>
 
     <main class="container mt-5 text-center">
-        <section class="grid grid-cols-2 gap-8">
+        <section class="lg:grid lg:grid-cols-2 lg:gap-8">
             <!-- Money Image Side..Left Side Starts -->
-            <div><img class="ml-96" src="1.jpg" alt="" srcset=""></div>
+            <div><img class="lg:ml-96 " src="1.jpg" alt="" srcset=""></div>
             <!-- Money Image Side..Left Side Ends -->
 
             <!-- Calculation Side..Right Side Starts -->
-            <div class="calculation-bg ml-52">
+            <div class="calculation-bg lg:ml-52">
                 <!-- Income Starts-->
                 <div>
                     <p class="mt-20 text-2xl font-semibold">Income</p>
-                    <div class="flex ml-36 mt-4">
+                    <div class="flex lg:ml-36 mt-4 ml-10">
                         <p class="mt-2">Income</p>
                         <input type="number" class="input-field ml-2">
                     </div>
@@ -39,15 +39,15 @@
                 <!-- Expenses Starts -->
                 <div class="mt-8">
                     <p class="text-2xl font-semibold">Expenses</p>
-                    <div class="flex ml-36 mt-4">
+                    <div class="flex lg:ml-36 mt-4 ml-10">
                         <p class="mt-2">Food</p>
                         <input type="number" class="input-field ml-5">
                     </div>
-                    <div class="flex ml-36 mt-4">
+                    <div class="flex lg:ml-36 mt-4 ml-10">
                         <p class="mt-2">Rent</p>
                         <input type="number" class="input-field ml-6">
                     </div>
-                    <div class="flex ml-36 mt-4">
+                    <div class="flex lg:ml-36 mt-4 ml-10">
                         <p class="mt-2">Clothes</p>
                         <input type="number" class="input-field ml-1">
                     </div>
@@ -63,7 +63,7 @@
                 <!-- Primary Output Ends -->
 
                 <!-- Saving Starts -->
-                <div class="flex ml-36 mt-8">
+                <div class="flex lg:ml-36 mt-4 ml-10 mt-8">
                     <p class="mt-2">Save</p>
                     <input type="number" class="input-field ml-5">
                     <p class="ml-2 mt-2">%</p>
