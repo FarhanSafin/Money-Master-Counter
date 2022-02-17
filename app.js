@@ -1,42 +1,46 @@
-function gettingValue(val) {
-    const value = document.getElementById(val);
-    const valueNumber = parseFloat(value.value);
+function gettingValue(val, text) {
+    const inputField = document.getElementById(val);
+    const valueNumber = parseFloat(inputField.value);
+
+    const inputOf = document.getElementById(text);
+    const inputOfText = inputOf.innerText;
 
     if(valueNumber >= 0) {
         return valueNumber;
     }else{
-        alert('give positive number');
+        alert('Give proper and positive value for: ' + inputOfText);
     }
     
 }
 
 function setingValue(fieldId, balance){
     const getValue = document.getElementById(fieldId);
-    if(balance != 'number') {
-        window.location.reload()
-    }else{
+    if (balance >= 0){
         getValue.innerText = balance;
+    }else{
+        getValue.innerText = "Can not calculate. Invalid Information"
     }
     
 }
 
 document.getElementById('calculate').addEventListener('click', function() {
-    const foodCostNumber = gettingValue('food-cost');
+    const incomeNumber = gettingValue('income-field', 'income-text');
 
-    const rentCostNumber = gettingValue('rent-cost');
+    const foodCostNumber = gettingValue('food-cost-field', 'food-text');
 
-    const clothesCostNumber = gettingValue('clothes-cost');
+    const rentCostNumber = gettingValue('rent-cost-field', 'rent-text');
 
-    const incomeNumber = gettingValue('income') 
+    const clothesCostNumber = gettingValue('clothes-cost-field', 'clothes-text');
 
     const totalExpense = foodCostNumber + rentCostNumber + clothesCostNumber;
 
     const remainingBalance = incomeNumber - totalExpense;
 
     if (totalExpense > incomeNumber) {
-        alert('cannt spend');
+        alert('You can not spend more than your income.');
         window.location.reload();
-    }else{
+    }
+    else{
         setingValue('expense', totalExpense);
         setingValue('remaining-balance', remainingBalance);
     }
