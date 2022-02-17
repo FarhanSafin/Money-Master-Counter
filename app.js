@@ -1,23 +1,44 @@
+function gettingValue(val) {
+    const value = document.getElementById(val);
+    const valueNumber = parseFloat(value.value);
+
+    if(valueNumber >= 0) {
+        return valueNumber;
+    }else{
+        alert('give positive number');
+    }
+    
+}
+
+function setingValue(fieldId, balance){
+    const getValue = document.getElementById(fieldId);
+    if(balance != 'number') {
+        window.location.reload()
+    }else{
+        getValue.innerText = balance;
+    }
+    
+}
+
 document.getElementById('calculate').addEventListener('click', function() {
-    const foodCost = document.getElementById('food-cost');
-    const foodCostNumber = parseFloat(foodCost.value);
+    const foodCostNumber = gettingValue('food-cost');
 
-    const rentCost = document.getElementById('rent-cost');
-    const rentCostNumber = parseFloat(rentCost.value);
+    const rentCostNumber = gettingValue('rent-cost');
 
-    const clothesCost = document.getElementById('clothes-cost');
-    const clothesCostNumber = parseFloat(clothesCost.value);
+    const clothesCostNumber = gettingValue('clothes-cost');
+
+    const incomeNumber = gettingValue('income') 
 
     const totalExpense = foodCostNumber + rentCostNumber + clothesCostNumber;
 
-    const expense = document.getElementById('expense');
-    expense.innerText = totalExpense;
-
-    const income = document.getElementById('income');
-    const incomeNumber = parseFloat(income.value); 
-
     const remainingBalance = incomeNumber - totalExpense;
 
-    const remain = document.getElementById('remaining-balance');
-    remain.innerText = remainingBalance;
+    if (totalExpense > incomeNumber) {
+        alert('cannt spend');
+        window.location.reload();
+    }else{
+        setingValue('expense', totalExpense);
+        setingValue('remaining-balance', remainingBalance);
+    }
+    
 })
