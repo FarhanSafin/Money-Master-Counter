@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <!-- Expenses Ends -->
-                <button class="bg-green-500	p-2 rounded-lg mt-6 text-white" id="calculate">Calculate</button>
+                <button class="bg-green-500	p-2 rounded-lg mt-6 text-white" id="calculate-button">Calculate</button>
 
                 <!-- Primary Output Starts -->
                 <div class="mt-8">
@@ -64,16 +64,16 @@
 
                 <!-- Saving Starts -->
                 <div class="flex lg:ml-36 mt-4 ml-10 mt-8">
-                    <p class="mt-2">Save</p>
-                    <input type="number" class="input-field ml-5">
+                    <p class="mt-2" id="save-text">Save</p>
+                    <input type="number" id="save-field" class="input-field ml-5">
                     <p class="ml-2 mt-2">%</p>
-                    <button class="bg-green-500 p-2 rounded-lg ml-3 text-white">Save</button>
+                    <button class="bg-green-500 p-2 rounded-lg ml-3 text-white" id="save-button">Save</button>
                 </div>
                 <!-- Saving Ends -->
 
                 <!-- Saving Calculation Starts -->
                 <div class="mt-8">
-                    <p class="text-2xl font-semibold">Saving Amount: <span>0</span></p>
+                    <p class="text-2xl font-semibold">Saving Amount: <span id="saved-amount">0</span></p>
                     <p class="text-2xl font-semibold">Remaining Balance: <span>0</span></p>
                 </div>
                 <!-- Saving Calculation Ends -->

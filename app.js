@@ -23,7 +23,7 @@ function setingValue(fieldId, balance){
     
 }
 
-document.getElementById('calculate').addEventListener('click', function() {
+document.getElementById('calculate-button').addEventListener('click', function() {
     const incomeNumber = gettingValue('income-field', 'income-text');
 
     const foodCostNumber = gettingValue('food-cost-field', 'food-text');
@@ -45,4 +45,16 @@ document.getElementById('calculate').addEventListener('click', function() {
         setingValue('remaining-balance', remainingBalance);
     }
     
+})
+
+
+
+document.getElementById('save-button').addEventListener('click', function(){
+    const incomeNumber = gettingValue('income-field', 'income-text');
+
+    const savingNumber = gettingValue('save-field', 'save-text');
+
+    const saving = incomeNumber * (savingNumber/100);
+
+    setingValue('saved-amount', saving);
 })
