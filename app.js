@@ -8,7 +8,7 @@ function gettingValue(val, text) {
     if(valueNumber >= 0) {
         return valueNumber;
     }else{
-        alert('Give proper and positive value for: ' + inputOfText);
+        alert('Give proper and positive value for: ' + inputOfText + '. Please try again.');
     }
     
 }
@@ -23,7 +23,7 @@ function gettingValueFromText(val, text) {
     if(valueNumber >= 0) {
         return valueNumber;
     }else{
-        alert('Give proper and positive value for: ' + inputOfText);
+        alert('Give proper and positive value for: ' + inputOfText + ' Please try again.');
     }
     
 }
@@ -33,7 +33,8 @@ function setingValue(fieldId, balance){
     if (balance >= 0){
         getValue.innerText = balance;
     }else{
-        getValue.innerText = "Can not calculate. Invalid Information"
+        /* getValue.innerText = "Can not calculate. Invalid Information"; */
+        window.location.reload();
     }
     
 }
@@ -52,7 +53,7 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const remainingBalance = incomeNumber - totalExpense;
 
     if (totalExpense > incomeNumber) {
-        alert('You can not spend more than your income.');
+        alert('You can not spend more than your income. Please try again.');
         window.location.reload();
     }
     else{
@@ -71,11 +72,21 @@ document.getElementById('save-button').addEventListener('click', function(){
 
     const savingNumber = gettingValue('save-field', 'save-text');
 
-    const saving = incomeNumber * (savingNumber/100);
+    let saving = incomeNumber * (savingNumber/100);
+    let fixedSaving = saving.toFixed(2)
 
-    const remainAfterSave = remainBalanceNumber - saving;
+    let remainAfterSave = remainBalanceNumber - saving;
+    let fixedRemainAfterSave = remainAfterSave.toFixed(2)
 
-    setingValue('saved-amount', saving);
+    
 
-    setingValue('remain-after-save', remainAfterSave);
+    if (saving > remainBalanceNumber){
+        alert('You dont have enough money to save. Please try again.');
+        window.location.reload();
+    }
+    else{
+        setingValue('saved-amount', fixedSaving);
+        setingValue('remain-after-save', fixedRemainAfterSave);
+    }
+    
 })
